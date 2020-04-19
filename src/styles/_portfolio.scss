@@ -1,0 +1,195 @@
+#portfolio {
+    position:relative;
+    font-size: 120%;
+    color: white;
+    width: 90%;
+    margin: 0 auto;
+    max-width: 960px;
+    padding-bottom: 100px;
+
+    @media only screen and (min-width: $cut) {
+      width: 80%;
+    }
+    svg {
+      width: 60px !important;
+      height: auto;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        width: 100vw;
+        height:100%;
+        background: -webkit-linear-gradient(248deg, rgb(37, 49, 43), rgb(70, 47, 47), rgb(29, 36, 46), rgb(198, 219, 236));
+        top:0;
+        left:50%;
+        display:block;
+        z-index:-1;
+        transform: translateX(-50%);
+    }
+}
+
+.portfolio-main {
+    min-height: 100vh;
+
+    & .mario {
+        font-size: 5vw;
+        line-height: 5vw;
+
+        &.sub {
+            font-size: 3vw;
+            line-height:3vw;
+            margin: 0;
+        }
+    }
+}
+
+.portfolio-show {
+    display:flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+
+    & a {
+        text-decoration: none;
+
+        & p {
+            margin: 0;
+        }
+    }
+
+    & .neon-icon {
+        font-size: 35px
+    }
+}
+
+.portfolio-miniature-container {
+    width: 450px;
+    height: 253px;
+    margin: 15px;
+    background-size: cover;
+    background-position: center;
+
+    &.caverynth {
+        background-image: url("../img/caverynth.png");
+    }
+    &.demonwoods {
+        background-image: url("../img/demonwoods.png");
+    }
+
+    &.blackwinter {
+        background-image: url("../img/blackwinter.PNG");
+    }
+}
+
+.portfolio-miniature {
+    width: 450px;
+}
+
+.portfolio-miniature-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #444, $alpha: 0.5);
+    opacity: 1;
+
+    &:hover {
+        background-color: rgba($color: #444, $alpha: 0);
+    }
+    transition-duration: 0.3s;
+
+    & .down {
+        height:100%;
+        width: 100%;
+    }
+
+    & .icon {
+        font-size: 30px;
+        position: relative;
+        text-decoration: none;
+        animation: pulse 1.3s infinite;
+        padding-top:25%;
+        color: white;
+    }
+}
+
+
+.portfolio-section {
+    display: grid;
+    grid-template-areas:
+    "header"
+    "content"
+    "sidebar";
+    grid-template-columns: 1fr 1fr 1fr;
+    color: #444;
+    min-height: 100vh;
+
+    @media only screen and (min-width:$cut) {
+        grid-template-areas:
+        "header  header  header"
+        "content content sidebar";
+    }
+}
+
+.portfolio-header {
+    grid-area: header;
+    margin-top: 25px;
+    text-align: center;
+
+    & p {
+        margin-bottom: 10px
+    }
+}
+
+.portfolio-download-details {
+    color: white;
+
+    & a {
+        color: white;
+    }
+}
+
+.portfolio-content {
+    grid-area: content;
+    padding: 20px;
+    margin-right: 10px;
+    color: #fff;
+
+    & b {
+        color: #feccc3;
+        text-decoration: none;
+        text-shadow: 0 0 1vw #f64a70,0 0 3vw #f64a70,0 0 .4vw #fd1551,0 0 .1vw #fd1551;
+    }
+
+    @media only screen and (min-width:$cut) {
+        margin-right: 50px;
+    }
+}
+
+.portfolio-sidebar {
+    grid-area: sidebar;
+    position: relative;
+
+    & .screenshot-container {
+        position: absolute;
+        margin: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+    }
+}
+
+.portfolio-sidebar-img {
+    width: 100%;
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 10px;
+}
+
+.portfolio-content-gif {
+    width: 100%;
+
+    & img {
+        width: 60%;
+        margin: auto;
+    }
+}
