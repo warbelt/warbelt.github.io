@@ -75,9 +75,17 @@
     &.demonwoods {
         background-image: url("../img/demonwoods.png");
     }
-
     &.blackwinter {
         background-image: url("../img/blackwinter.png");
+    }    
+    &.blackwinterss {
+        background-image: url("../img/screenshots/blackwintergameplay.png");
+    }
+    &.theoldshelter {
+        background-image: url("../img/theoldshelter.png");
+    }    
+    &.theoldshelterss {
+        background-image: url("../img/screenshots/theoldsheltergameplay.png");
     }
 }
 
@@ -191,5 +199,46 @@
     & img {
         width: 60%;
         margin: auto;
+    }
+}
+
+.portfolio-jams {
+    display: grid;
+    grid-template-areas:
+    "left"
+    "right";
+    grid-template-columns: 1fr 1fr;
+    color: white;
+    margin-top: 50px;
+
+    @media only screen and (min-width:$cut) {
+        grid-template-areas:
+        "left right"
+    }
+
+    & a {
+        text-decoration: none;
+        color: white;
+    }
+
+    & .neon-red {
+        font-size: 40px;
+        text-align: center;
+        margin: 0px;
+    }
+
+    & b {
+        color: #feccc3;
+        text-decoration: none;
+        text-shadow: 0 0 1vw #f64a70,0 0 3vw #f64a70,0 0 .4vw #fd1551,0 0 .1vw #fd1551;
+    }
+
+    & .description {
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+
+    & .play-link {
+        text-align: center;
     }
 }
