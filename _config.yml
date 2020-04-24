@@ -14,7 +14,7 @@ email: mdurantezs@gmail.com
 
 # Google-analytics
 google-analytics:
-  id: ""
+  id: "UA-164550461-1"
 
 exclude: ['package.json', 'src' , 'node_modules']
 
